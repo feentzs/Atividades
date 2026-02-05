@@ -1,0 +1,97 @@
+/* Reset básico para garantir medidas corretas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /* Suposição de fonte */
+}
+
+/* 1. Layout da Página */
+body {
+  background-color: var(--color-bg-page);
+  color: var(--color-text);
+  
+  /* O Desafio de Alinhamento: Flexbox Centralizado */
+  display: flex;
+  justify-content: center; /* Alinha horizontalmente */
+  align-items: center;     /* Alinha verticalmente */
+  min-height: 100vh;       /* Altura total da viewport */
+}
+
+/* 2. O Cartão (Container Principal) */
+main {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: calc(var(--spacing-unit) * 2); /* Dobro do espaçamento padrão */
+  width: 400px;
+  
+  /* Layout interno do cartão (pilha vertical) */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit); /* Espaço uniforme entre os filhos */
+  
+  /* Profundidade */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Tipografia básica dentro do cartão */
+h1 {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+p {
+  text-align: center;
+  opacity: 0.7;
+  margin-bottom: var(--spacing-unit);
+  font-size: 0.9rem;
+}
+
+/* 3. Campos de Texto */
+input {
+  width: 100%;
+  padding: var(--spacing-unit);
+  background-color: var(--color-input-bg);
+  border: 1px solid #333;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  outline: none; /* Remove o outline padrão feio do browser */
+  
+  /* Prepara a transição da borda */
+  transition: border-color var(--anim-speed) var(--anim-curve);
+}
+
+/* Micro-interação: Foco no input */
+input:focus {
+  border-color: var(--color-brand-secondary);
+}
+
+/* 4. O Botão */
+button {
+  width: 100%;
+  padding: var(--spacing-unit);
+  margin-top: var(--spacing-unit);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+
+  /* O Grande Truque: Gradiente Linear */
+  background-image: linear-gradient(
+    90deg, 
+    var(--color-brand-primary), 
+    var(--color-brand-secondary)
+  );
+
+  /* 5. Animações e Interações */
+  transition: 
+    transform var(--anim-speed) var(--anim-curve),
+    opacity var(--anim-speed) var(--anim-curve);
+}
+
+button:hover {
+  transform: scale(1.02); /* Aumenta levemente */
+  opacity: 0.9;
+}
