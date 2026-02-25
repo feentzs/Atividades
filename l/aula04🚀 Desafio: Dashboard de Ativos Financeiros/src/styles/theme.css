@@ -1,0 +1,27 @@
+:root {
+  --alta: #27ae60;
+  --baixa: #e74c3c;
+  --fundo-card: #f4f7f6;
+  --texto-principal: #2c3e50;
+  --lucro-azul: #2980b9; /* Para o desafio extra */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f3;
+  color: var(--texto-principal);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
