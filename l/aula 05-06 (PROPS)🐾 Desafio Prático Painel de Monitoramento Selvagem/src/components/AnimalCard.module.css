@@ -1,0 +1,115 @@
+/* ============================================
+   AnimalCard - CSS Module
+   Estilos exclusivos do componente cartão
+   ============================================ */
+
+/* --- Base do Cartão --- */
+.card {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio);
+  padding: var(--espacamento-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: fadeInUp 0.5s ease both;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: var(--borda-raio) var(--borda-raio) 0 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Nome do Animal --- */
+.animalName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin-bottom: var(--espacamento-sm);
+  letter-spacing: -0.01em;
+}
+
+/* --- Nome Científico (espécie) --- */
+.species {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  font-style: italic;
+  margin-bottom: var(--espacamento-lg);
+  opacity: 0.85;
+}
+
+/* --- Linha divisória --- */
+.divider {
+  height: 1px;
+  background: var(--cor-borda);
+  border: none;
+  margin-bottom: var(--espacamento-md);
+}
+
+/* --- Badge de Status --- */
+.statusBadge {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: var(--espacamento-sm) var(--espacamento-md);
+  border-radius: var(--borda-raio-sm);
+  letter-spacing: 0.02em;
+  transition: background-color 0.3s ease;
+}
+
+/* ============================================
+   CLASSES DE RISCO
+   ============================================ */
+
+/* --- Classe: PERIGO (isDangerous = true) --- */
+.danger {
+  color: var(--cor-perigo);
+  background-color: var(--cor-perigo-bg);
+  border: 1px solid var(--cor-perigo-borda);
+}
+
+.cardDanger {
+  border-color: var(--cor-perigo-borda);
+}
+
+.cardDanger::before {
+  background: linear-gradient(90deg, var(--cor-perigo), transparent);
+  opacity: 1;
+}
+
+.cardDanger:hover {
+  border-color: var(--cor-perigo);
+  box-shadow: 0 12px 40px rgba(155, 27, 48, 0.15);
+}
+
+/* --- Classe: SEGURANÇA (isDangerous = false) --- */
+.safe {
+  color: var(--cor-seguranca);
+  background-color: var(--cor-seguranca-bg);
+  border: 1px solid var(--cor-seguranca-borda);
+}
+
+.cardSafe {
+  border-color: var(--cor-seguranca-borda);
+}
+
+.cardSafe::before {
+  background: linear-gradient(90deg, var(--cor-seguranca), transparent);
+  opacity: 1;
+}
+
+.cardSafe:hover {
+  border-color: var(--cor-seguranca);
+  box-shadow: 0 12px 40px rgba(0, 119, 182, 0.12);
+}

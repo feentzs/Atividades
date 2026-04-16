@@ -1,0 +1,38 @@
+/* ============================================
+   TEMA GLOBAL - Reserva Ambiental Ecológica
+   ============================================ */
+:root {
+  /* --- Cores do Tema Natureza --- */
+  --cor-natureza: #2d6a4f;          /* Verde Selva */
+  --cor-natureza-escura: #1b4332;   /* Verde Floresta Profundo */
+  --cor-natureza-clara: #52b788;    /* Verde Folhagem */
+
+  --cor-perigo: #9b1b30;            /* Vermelho Escuro (Perigo) */
+  --cor-perigo-bg: rgba(155, 27, 48, 0.12);
+  --cor-perigo-borda: rgba(155, 27, 48, 0.35);
+
+  --cor-seguranca: #0077b6;         /* Azul Segurança */
+  --cor-seguranca-bg: rgba(0, 119, 182, 0.10);
+  --cor-seguranca-borda: rgba(0, 119, 182, 0.30);
+
+  /* --- Neutros --- */
+  --cor-fundo: #0f1b15;
+  --cor-superficie: #162b1e;
+  --cor-superficie-elevada: #1e3a28;
+  --cor-texto: #e8f5e9;
+  --cor-texto-secundario: #a5d6a7;
+  --cor-borda: rgba(82, 183, 136, 0.18);
+
+  /* --- Tipografia --- */
+  --fonte-principal: 'Outfit', system-ui, -apple-system, sans-serif;
+
+  /* --- Espaçamentos --- */
+  --espacamento-sm: 0.5rem;
+  --espacamento-md: 1rem;
+  --espacamento-lg: 1.5rem;
+  --espacamento-xl: 2rem;
+
+  /* --- Bordas --- */
+  --borda-raio: 16px;
+  --borda-raio-sm: 8px;
+}
