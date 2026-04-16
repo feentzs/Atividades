@@ -1,0 +1,32 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444444;
+}
+
+.input {
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  color: #1a1a1a;
+  background-color: #fafafa;
+}
+
+.input::placeholder {
+  color: #aaaaaa;
+}
+
+.input:focus {
+  border-color: #4a90d9;
+  background-color: #ffffff;
+}
